@@ -51,7 +51,9 @@ const char DaysOfTheWeek[][7][4] =
 {
   {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"},
   {"su", "ma", "ti", "ke", "to", "pe", "la"},
-  {"So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"}
+  {"So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"},
+  {"ned", "pon", "uto", "str", "stv", "pia", "sob"}/*,
+  {"ned", "pon", "ute", "str", "stv", "pat", "sob"}*/
 };
 
 const char MonthsOfYear[][13][7] =
@@ -61,7 +63,11 @@ const char MonthsOfYear[][13][7] =
   {"???","tami", "helmi", "maalis", "huhti", "touko", "kesä",
    "heinä", "elo", "syys", "loka", "marras", "joulu"},
   {"???","Jan","Feb","Mar","Apr","Mai","Jun",
-   "Jul","Aug","Sep","Okt","Nov","Dez"}
+   "Jul","Aug","Sep","Okt","Nov","Dez"},
+  {"???","jan","feb","mar","apr","maj","jun",
+   "jul","aug","sep","okt","nov","dec"}/*,
+  {"???","leden","unor","brezen","duben","kveten","cerven",
+   "cervenec","srpen","zari","rijen","listopad","prosinec"}*/
 };
 
 #if __IAR_SYSTEMS_ICC__

@@ -99,6 +99,9 @@
 #define LANG_EN (0)
 #define LANG_FI (1)
 #define LANG_DE (2)
+#define LANG_SK (3)
+//#define LANG_CZ (4)
+#define CURRENT_LANG (LANG_SK)
 
 extern const char DaysOfTheWeek[][7][4];
 extern const char MonthsOfYear[][13][7];
