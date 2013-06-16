@@ -389,6 +389,16 @@ static void DisplayQueueMessageHandler(tMessage* pMsg)
     break;
 #endif
 
+  case GetRtcMsg:
+    SetupMessageWithBuffer(&Msg, RtcRespMsg, MSG_OPT_NONE);
+    if (Msg.pBuffer != NULL)
+    {
+      halRtcGet((tRtcHostMsgPayload*)Msg.pBuffer);
+      Msg.Length = sizeof(tRtcHostMsgPayload);
+      RouteMsg(&Msg);
+    }
+    break;
+
   case ServiceMenuMsg:
     ServiceMenuHandler();
     break;

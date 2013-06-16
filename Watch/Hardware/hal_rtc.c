@@ -121,6 +121,20 @@ void InitRealTimeClock(void)
   RTCCTL01 &= ~RTCHOLD;  
 }
 
+void halRtcGet(tRtcHostMsgPayload* pRtcData)
+{
+  tWordByteUnion temp;
+  temp.word = RTCYEAR;
+  pRtcData->YearLsb = temp.Bytes.byte0;
+  pRtcData->YearMsb = temp.Bytes.byte1;
+  pRtcData->Month = RTCMON;
+  pRtcData->DayOfMonth = RTCDAY; 
+  pRtcData->DayOfWeek = RTCDOW;
+  pRtcData->Hour = RTCHOUR;
+  pRtcData->Minute = RTCMIN;
+  pRtcData->Second = RTCSEC;
+}
+
 void SetRtc(Rtc_t *pRtcData)
 {
   // Stop the RTC

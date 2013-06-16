@@ -629,6 +629,29 @@ typedef struct
 } tSetCustomFontMsgPayload;
 
 /*!
+ * \param Year is a 12 bit value
+ * \param Month of the year - 1 to 12
+ * \param DayOfMonth is 1 to 31
+ * \param DayOfWeek is 0 to 6
+ * \param Hour is 0 to 24
+ * \param Minute is 0 to 59
+ * \param Second is 0 to 59
+ */
+typedef struct
+{
+  unsigned char YearMsb;
+  unsigned char YearLsb;
+  unsigned char Month;
+  unsigned char DayOfMonth;
+  unsigned char DayOfWeek;
+  unsigned char Hour;
+  unsigned char Minute;
+  unsigned char Second;
+
+} tRtcHostMsgPayload;
+
+
+/*!
  * \param DisplayMode is Idle, Application, or Notification
  * \param ButtonIndex is the button index
  * \param ButtonEvent is immediate, pressed, hold, or long hold
